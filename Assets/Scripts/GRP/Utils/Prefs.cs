@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GRPU.Utils
 {
-    public static class Prefs
+    public static class GRPU_Prefs
     {
         public static float GetFloat(string key, float failsafe)
             => PlayerPrefs.HasKey(key)

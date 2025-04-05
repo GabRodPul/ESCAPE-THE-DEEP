@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GRP.Utils
+namespace GRPU.Utils
 {
     /// <summary>
     /// Abstract Singleton class.

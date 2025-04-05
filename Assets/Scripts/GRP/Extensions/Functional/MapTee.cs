@@ -1,6 +1,6 @@
 using System;
 
-namespace GRP.Extensions.Functional
+namespace GRPU.Extensions.Functional
 {
     public static partial class Functional
     {

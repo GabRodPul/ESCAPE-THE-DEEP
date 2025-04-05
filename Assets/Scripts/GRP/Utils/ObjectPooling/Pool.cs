@@ -1,10 +1,10 @@
 // #define A_NIGHTMARE_ON_OOP_STREET
 
-using GRP.Extensions;
+using GRPU.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GRP.Utils.ObjectPooling
+namespace GRPU.Utils.ObjectPooling
 {
     public class Pool
     {
@@ -275,13 +275,12 @@ namespace GRP.Utils.ObjectPooling
             return pool;
         }
 
-        // TODO: FIND THIS PoolSetup SHIT
-        // public static Pool GetAndFill( PoolSetup.PoolSetupArgs args, Transform pooledParent )
-        // {
-        //     var pool = GetOrAdd( args.prefab, pooledParent );
-        //     pool.Fill( args.count );
-        //     return pool;
-        // }
+        public static Pool GetAndFill( PoolSetup.PoolSetupArgs args, Transform pooledParent )
+        {
+            var pool = GetOrAdd( args.prefab, pooledParent );
+            pool.Fill( args.count );
+            return pool;
+        }
 
         /// <summary>
         /// Clears all Pools.

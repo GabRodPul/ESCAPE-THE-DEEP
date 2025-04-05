@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GRP.Utils
+namespace GRPU.Utils
 {
     public class Timer : MonoBehaviour
     {

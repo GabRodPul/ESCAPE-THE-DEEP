@@ -1,9 +1,9 @@
-using GRP.Extensions.Functional;
+using GRPU.Extensions.Functional;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GRP.Utils.ObjectPooling
+namespace GRPU.Utils.ObjectPooling
 {
     [DisallowMultipleComponent]
     public class PoolResource

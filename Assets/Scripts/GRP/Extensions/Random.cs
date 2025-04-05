@@ -1,13 +1,13 @@
-using GRP.Extensions;
+using GRPU.Extensions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace GRP.Utils
+namespace GRPU.Extensions
 {
 
-    public static class BC_Random
+    public static class GRPU_Random
     {
         /// <summary>
         /// Extension method for System.Random.

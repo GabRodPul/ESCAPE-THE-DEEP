@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
-namespace GRP.Extensions
+namespace GRPU.Extensions
 {
-    public static class BC_UnityExtensions
+    public static class GRPU_UnityExtensions
     {
         /// <summary>
         /// Returns true when the passed GameObject is "Missing"

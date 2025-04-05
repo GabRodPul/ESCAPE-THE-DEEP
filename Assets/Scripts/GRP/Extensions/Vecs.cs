@@ -21,7 +21,7 @@ using SNV3 = System.Numerics.Vector3;
 using SNV4 = System.Numerics.Vector4;
 using System;
 
-namespace GRP.Extensions
+namespace GRPU.Extensions
 {
     public static partial class GRPU_Vecs
     {
@@ -52,6 +52,51 @@ namespace GRP.Extensions
             [MethodImpl( MethodImplOptions.AggressiveInlining )]
             public static implicit operator bool( Bool3 b3 ) => b3.All();
         }
+
+        #region Static methods
+        // Fill
+        /// <summary>
+        /// Constructs a Vector2 with n as all of its components.
+        /// </summary>
+        /// <param name="n">Number to fill the Vector2 with.</param>
+        /// <returns>Vector2 with n as all of its components.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static UV2 Fill2(float n) => new UV2(n, n);
+
+        /// <summary>
+        /// Constructs a Vector2Int with n as all of its components.
+        /// </summary>
+        /// <param name="n">Number to fill the Vector2Int with.</param>
+        /// <returns>Vector2Int with n as all of its components.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static UV2I Fill2Int(int n) => new UV2I(n, n);
+
+        /// <summary>
+        /// Constructs a Vector3 with n as all of its components.
+        /// </summary>
+        /// <param name="n">Number to fill the Vector3 with.</param>
+        /// <returns>Vector3 with n as all of its components.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static UV3 Fill3(float n) => new UV3(n, n, n);
+
+        /// <summary>
+        /// Constructs a Vector3Int with n as all of its components.
+        /// </summary>
+        /// <param name="n">Number to fill the Vector3Int with.</param>
+        /// <returns>Vector3Int with n as all of its components.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static UV3I Fill3Int(int n) => new UV3I(n, n, n);
+
+        /// <summary>
+        /// Constructs a Vector4 with n as all of its components.
+        /// </summary>
+        /// <param name="n">Number to fill the Vector4
+        /// with.</param>
+        /// <returns>Vector4
+        /// with n as all of its components.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static UV3 Fill4(float n) => new UV4(n, n, n, n);
+        #endregion
 
         #region UnityEngine's Vectors extensions
         // Set[Axis]
@@ -526,51 +571,6 @@ namespace GRP.Extensions
             this
 #endif
              UV4 v, UV4 u, Func<float, float, float> f ) => new( f( v.x, 0 ), f( v.y, u.y ), f( v.z, u.z ), f( v.w, u.w ) );
-        #endregion
-
-        #region Static methods
-        // Fill
-        /// <summary>
-        /// Constructs a Vector2 with n as all of its components.
-        /// </summary>
-        /// <param name="n">Number to fill the Vector2 with.</param>
-        /// <returns>Vector2 with n as all of its components.</returns>
-        [MethodImpl( MethodImplOptions.AggressiveInlining )]
-        public static UV2 Fill2( float n ) => new UV2( n, n );
-
-        /// <summary>
-        /// Constructs a Vector2Int with n as all of its components.
-        /// </summary>
-        /// <param name="n">Number to fill the Vector2Int with.</param>
-        /// <returns>Vector2Int with n as all of its components.</returns>
-        [MethodImpl( MethodImplOptions.AggressiveInlining )]
-        public static UV2I Fill2Int( int n ) => new UV2I( n, n );
-
-        /// <summary>
-        /// Constructs a Vector3 with n as all of its components.
-        /// </summary>
-        /// <param name="n">Number to fill the Vector3 with.</param>
-        /// <returns>Vector3 with n as all of its components.</returns>
-        [MethodImpl( MethodImplOptions.AggressiveInlining )]
-        public static UV3 Fill3( float n ) => new UV3( n, n, n );
-
-        /// <summary>
-        /// Constructs a Vector3Int with n as all of its components.
-        /// </summary>
-        /// <param name="n">Number to fill the Vector3Int with.</param>
-        /// <returns>Vector3Int with n as all of its components.</returns>
-        [MethodImpl( MethodImplOptions.AggressiveInlining )]
-        public static UV3I Fill3Int( int n ) => new UV3I( n, n, n );
-
-        /// <summary>
-        /// Constructs a Vector4 with n as all of its components.
-        /// </summary>
-        /// <param name="n">Number to fill the Vector4
-        /// with.</param>
-        /// <returns>Vector4
-        /// with n as all of its components.</returns>
-        [MethodImpl( MethodImplOptions.AggressiveInlining )]
-        public static UV3 Fill4( float n ) => new UV4( n, n, n, n );
         #endregion
     }
 }

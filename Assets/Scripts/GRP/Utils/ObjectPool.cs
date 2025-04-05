@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GRP.Utils
+using GRPU.Extensions;
+
+namespace GRPU.Utils
 {
     [Obsolete("This class is obsolete. Use BugCatcher.Utils.ObjectPooling.Pool instead.", false)]
     public class ObjectPool : MonoSingle<ObjectPool>

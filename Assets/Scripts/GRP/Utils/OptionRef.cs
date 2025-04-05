@@ -4,7 +4,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace GRP.Utils
+namespace GRPU.Utils
 {
     public class NullOptionException : Exception
     {

@@ -1,9 +1,9 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace GRP.Utils
+namespace GRPU.Utils
 {
-    public static class BC_Utils
+    public static class GRPU_Utils
     {
         public static string Header<T>()
             => "[" + nameof( T ) + "] - ";
