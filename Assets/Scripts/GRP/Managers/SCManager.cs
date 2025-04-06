@@ -19,6 +19,11 @@ public class SCManager : MonoSingle<SCManager>
         // SceneManager.sceneUnloaded += ( s, m ) => { };
     }
 
+    void Start()
+    {
+        AudioManager.Instance.PlaySFX( "" )
+    }
+
     public void LoadScene(string sceneName) => SceneManager.LoadScene(sceneName);
     public void LoadScene(int index) => SceneManager.LoadScene(index);
 

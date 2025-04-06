@@ -1,6 +1,5 @@
 using System.Linq;
 using GRPU.Extensions;
-using NUnit.Framework;
 using UnityEngine;
 
 public class TtclWiggle : MonoBehaviour
@@ -23,7 +22,7 @@ public class TtclWiggle : MonoBehaviour
             .Select( c => c.transform )
             .ToArray();
 
-        Assert.AreEqual(_r.Length, _children.Length);
+        UnityEngine.Assertions.Assert.AreEqual(_r.Length, _children.Length);
         float t = Time.time;
         _startT = new float[_children.Length]
             .Select( _ => t )
