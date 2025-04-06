@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      enemyFullSmiling_0: -7395436180919827104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

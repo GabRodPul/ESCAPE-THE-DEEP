@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AllTentaclesAndBackground_0: 2700529354760236834
+      AllTentaclesAndBackground_1: 1339522207388624368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

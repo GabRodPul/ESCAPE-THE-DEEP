@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tentaclesLeft_0: 5153894086809202864
+      tentaclesLeft_1: -7954782668020628524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

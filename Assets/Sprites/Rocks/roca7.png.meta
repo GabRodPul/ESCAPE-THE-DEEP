@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      roca7_0: 4535406617533771123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

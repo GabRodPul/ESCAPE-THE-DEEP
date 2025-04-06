@@ -155,7 +155,7 @@ public class AudioManager : MonoSingle<AudioManager>
     private void LoadAudioClips(Dictionary<string, AudioClip> dest, params (string name, string path)[] src)
     {
         foreach (var c in src)
-            dest[c.name] = Resources.Load<AudioClip>(c.path);
+            dest[c.name] = Resources.Load<AudioClip>("Audio/" + c.path);
 
         VerifyLoading(dest);
     }
@@ -165,7 +165,7 @@ public class AudioManager : MonoSingle<AudioManager>
     /// </summary>
     private void LoadSFXClips()
         => LoadAudioClips(sfxClips, 
-            ("Ambient", "Music/caveambient"),
+            ("Ambient", "SFX/caveambient"),
             ("Bubbles", "SFX/Bubbles"),
             ("Death", "SFX/playerDeath"),
             ("Rock", "SFX/rocaCayendo")
