@@ -1,5 +1,5 @@
 // Debug checks for Start()
-#define SPAWNER_DEBUG
+// #define SPAWNER_DEBUG
 
 using System;
 using System.Linq;

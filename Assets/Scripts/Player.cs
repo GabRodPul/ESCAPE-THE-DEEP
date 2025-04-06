@@ -12,13 +12,24 @@ public class Player : MonoBehaviour
     {
         rb = this.GetOrAddComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float inputHorizontal = Input.GetAxis("Horizontal");
-        rb.linearVelocity 
-            = rb.linearVelocity.WithX(inputHorizontal * speed);
+        // float inputHorizontal = Input.GetAxis("Horizontal");
+        // rb.linearVelocity 
+        //     = rb.linearVelocity.WithX(inputHorizontal * speed);
+
+        rb.linearVelocity
+            = new Vector2( Input.GetAxis( "Horizontal" ), Input.GetAxis( "Vertical" ) )
+            * speed;
+    }
+
+    void OnCollisionEnter2D( Collision2D other )
+    {
+        if ( other.gameObject.layer == Layers.Hazard )
+            GameManager.Instance.GameOver();
     }
 }

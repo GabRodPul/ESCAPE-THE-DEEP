@@ -15,7 +15,7 @@ TagManager:
   - Walls
   - Hazard
   - HugeFucker
-  - 
+  - TheVoid
   - 
   - 
   - 
@@ -40,6 +40,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 158250955
+    locked: 0
+  - name: Fucker
+    uniqueID: 1262214435
+    locked: 0
+  - name: Hazard
+    uniqueID: 1077622687
+    locked: 0
+  - name: PlayerTtcl
+    uniqueID: 2744247341
+    locked: 0
+  - name: PlayerBody
+    uniqueID: 2142453995
     locked: 0
   m_RenderingLayers:
   - Default

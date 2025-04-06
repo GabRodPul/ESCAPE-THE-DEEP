@@ -18,8 +18,10 @@ using GRPU.Extensions.Functional;
 [DefaultExecutionOrder(-9999), DisallowMultipleComponent]
 public class AudioManager : MonoSingle<AudioManager>
 {
-    public const int GEN_CHANNEL = 0;
-    public const int TSFX_CHANNEL = 0;
+    public const int CHAN_GEN       = 3;
+    public const int CHAN_AMBIENCE  = 0;
+    public const int CHAN_BUBBLES   = 1;
+    public const int CHAN_DEATH     = 2;
 
     public const string PREFS_MUS_VOL = "MusicVolume";
     public const string PREFS_MUS_MUTE = "MusicMute";
@@ -163,7 +165,10 @@ public class AudioManager : MonoSingle<AudioManager>
     /// </summary>
     private void LoadSFXClips()
         => LoadAudioClips(sfxClips, 
-            ("Bubbles", "SFX/Bubbles")
+            ("Ambient", "Music/caveambient"),
+            ("Bubbles", "SFX/Bubbles"),
+            ("Death", "SFX/playerDeath"),
+            ("Rock", "SFX/rocaCayendo")
         );
 
     /// <summary>
@@ -171,7 +176,6 @@ public class AudioManager : MonoSingle<AudioManager>
     /// </summary>
     private void LoadMusicClips()
         => LoadAudioClips(musicClips,
-            ("Ambient", "Music/caveambient"),
             ("MainTheme", "Music/main_theme")
         );
 
@@ -219,7 +223,7 @@ public class AudioManager : MonoSingle<AudioManager>
     /// </summary>
     /// <param name="clipName">SFX clip name</param>
     /// <param name="index">AudioSource channel index.</param>
-    public void PlaySFX(string clipName, int index = GEN_CHANNEL)
+    public void PlaySFX(string clipName, int index = CHAN_GEN)
         => PlayAudioClip(sfxClips, sfxChannels[index], clipName, false);
 
     public bool IsPlayingSFX(int index) => sfxChannels[index].isPlaying;

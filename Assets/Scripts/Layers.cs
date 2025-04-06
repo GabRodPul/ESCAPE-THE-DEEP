@@ -9,16 +9,17 @@ using UnityEngine.Assertions;
 /// </summary>
 public static class Layers
 {
-    public const int Default = 0;
-    public const int TransparentFX = 1;
-    public const int IgnoreRaycast = 2;
+    public const int Default        = 0;
+    public const int TransparentFX  = 1;
+    public const int IgnoreRaycast  = 2;
     // public const int Ground = 3;
-    public const int Water = 4;
-    public const int UI = 5;
-    public const int Player = 6;
-    public const int Walls = 7;
-    public const int Hazard = 8;
-    public const int HugeFucker = 9;
+    public const int Water          = 4;
+    public const int UI             = 5;
+    public const int Player         = 6;
+    public const int Walls          = 7;
+    public const int Hazard         = 8;
+    public const int HugeFucker     = 9;
+    public const int TheVoid        = 10;
 
     /// <summary>
     /// Array access to the layers built with reflection.
@@ -27,8 +28,8 @@ public static class Layers
         = typeof(Layers)
             .GetFields(BindingFlags.Public | BindingFlags.Static)
             .Where((fi) => fi.IsLiteral
-                         && !fi.IsInitOnly
-                         && fi.FieldType == typeof(int))
+                        && !fi.IsInitOnly
+                        && fi.FieldType == typeof(int))
             .Select((v) => (int)v.GetRawConstantValue())
             .ToArray();
 
